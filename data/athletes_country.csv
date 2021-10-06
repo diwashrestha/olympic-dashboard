@@ -1,0 +1,207 @@
+iso3,noc,count
+AFG,Afghanistan,5
+ALB,Albania,8
+DZA,Algeria,41
+ASM,American Samoa,5
+ADO,Andorra,2
+AGO,Angola,20
+ATG,Antigua and Barbuda,6
+ARG,Argentina,180
+ARM,Armenia,16
+ABW,Aruba,3
+AUS,Australia,470
+AUT,Austria,72
+AZE,Azerbaijan,41
+BHS,"Bahamas, The",16
+BHR,Bahrain,31
+BGD,Bangladesh,6
+BRB,Barbados,7
+BLR,Belarus,104
+BEL,Belgium,125
+BLZ,Belize,3
+BEN,Benin,7
+BMU,Bermuda,2
+BTN,Bhutan,3
+BOL,Bolivia,5
+BIH,Bosnia and Herzegovina,7
+BWA,Botswana,13
+BRA,Brazil,291
+BRN,Brunei Darussalam,2
+BGR,Bulgaria,41
+BFA,Burkina Faso,7
+BDI,Burundi,6
+CIV,Côte d'Ivoire,29
+KHM,Cambodia,3
+CMR,Cameroon,11
+CAN,Canada,368
+CPV,Cape Verde,6
+CYM,Cayman Islands,5
+CAF,Central African Republic,2
+TCD,Chad,3
+CHL,Chile,56
+TWN,Chinese Taipei,67
+COL,Colombia,64
+COM,Comoros,3
+COG,Congo,3
+COK,Cook Islands,6
+CRI,Costa Rica,13
+HRV,Croatia,57
+CUB,Cuba,69
+CYP,Cyprus,14
+CZE,Czech Republic,117
+COD,Democratic Republic of the Congo,7
+TLS,Democratic Republic of Timor-Leste,3
+DNK,Denmark,103
+DJI,Djibouti,4
+DMA,Dominica,2
+DOM,Dominican Republic,61
+ECU,Ecuador,46
+EGY,Egypt,133
+SLV,El Salvador,5
+GNQ,Equatorial Guinea,3
+ERI,Eritrea,13
+EST,Estonia,33
+,Eswatini,4
+ETH,Ethiopia,42
+FSM,Federated States of Micronesia,3
+FJI,Fiji,28
+FIN,Finland,45
+FRA,France,377
+GAB,Gabon,5
+GMB,Gambia,3
+GEO,Georgia,35
+DEU,Germany,400
+GHA,Ghana,14
+GBR,Great Britain,366
+GRC,Greece,75
+GRD,Grenada,6
+GUM,Guam,5
+GTM,Guatemala,22
+GIN,Guinea,5
+GNB,Guinea-Bissau,4
+GUY,Guyana,7
+HTI,Haiti,6
+HND,Honduras,25
+HKG,"Hong Kong, China",40
+HUN,Hungary,155
+ISL,Iceland,4
+IND,India,117
+IDN,Indonesia,26
+IRQ,Iraq,4
+IRL,Ireland,116
+IRN,Islamic Republic of Iran,66
+ISR,Israel,85
+ITA,Italy,356
+JAM,Jamaica,60
+JPN,Japan,586
+JOR,Jordan,11
+KAZ,Kazakhstan,92
+KEN,Kenya,78
+KIR,Kiribati,3
+KSV,Kosovo,10
+KWT,Kuwait,10
+KGZ,Kyrgyzstan,16
+LAO,Lao People's Democratic Republic,4
+LVA,Latvia,29
+LBN,Lebanon,6
+LSO,Lesotho,2
+LBR,Liberia,3
+LBY,Libya,4
+LIE,Liechtenstein,5
+LTU,Lithuania,37
+LUX,Luxembourg,11
+MDG,Madagascar,6
+MWI,Malawi,5
+MYS,Malaysia,29
+MDV,Maldives,4
+MLI,Mali,4
+MLT,Malta,6
+MHL,Marshall Islands,2
+MRT,Mauritania,2
+MUS,Mauritius,7
+MEX,Mexico,155
+MCO,Monaco,6
+MNG,Mongolia,43
+MNE,Montenegro,35
+MAR,Morocco,48
+MOZ,Mozambique,8
+MMR,Myanmar,2
+NAM,Namibia,11
+NRU,Nauru,2
+NPL,Nepal,5
+NLD,Netherlands,274
+NZL,New Zealand,202
+NIC,Nicaragua,8
+NER,Niger,7
+NGA,Nigeria,59
+MKD,North Macedonia,8
+NOR,Norway,92
+OMN,Oman,5
+PAK,Pakistan,10
+PLW,Palau,3
+PSE,Palestine,4
+PAN,Panama,9
+PNG,Papua New Guinea,7
+PRY,Paraguay,8
+CHN,People's Republic of China,401
+PER,Peru,33
+PHL,Philippines,18
+POL,Poland,195
+PRT,Portugal,85
+PRI,Puerto Rico,35
+QAT,Qatar,14
+,Refugee Olympic Team,26
+KOR,Republic of Korea,223
+MDA,Republic of Moldova,19
+RUS,ROC,318
+ROU,Romania,99
+RWA,Rwanda,5
+KNA,Saint Kitts and Nevis,2
+LCA,Saint Lucia,5
+WSM,Samoa,8
+SMR,San Marino,4
+STP,Sao Tome and Principe,3
+SAU,Saudi Arabia,32
+SEN,Senegal,9
+SRB,Serbia,83
+SYC,Seychelles,5
+SLE,Sierra Leone,4
+SGP,Singapore,23
+SVK,Slovakia,38
+SVN,Slovenia,51
+SLB,Solomon Islands,3
+SOM,Somalia,2
+ZAF,South Africa,171
+SSD,South Sudan,2
+ESP,Spain,324
+LKA,Sri Lanka,9
+VCT,St Vincent and the Grenadines,2
+SDN,Sudan,5
+SUR,Suriname,3
+SWE,Sweden,129
+CHE,Switzerland,115
+SYR,Syrian Arab Republic,6
+TJK,Tajikistan,8
+THA,Thailand,39
+TGO,Togo,4
+TON,Tonga,5
+TTO,Trinidad and Tobago,31
+TUN,Tunisia,57
+TUR,Turkey,102
+TKM,Turkmenistan,8
+TUV,Tuvalu,2
+UGA,Uganda,24
+UKR,Ukraine,152
+ARE,United Arab Emirates,4
+TZA,United Republic of Tanzania,2
+USA,United States,615
+URY,Uruguay,11
+UZB,Uzbekistan,63
+VUT,Vanuatu,2
+VEN,"Venezuela, RB",43
+VNM,Vietnam,17
+VGB,"Virgin Islands, British",3
+VIR,"Virgin Islands, US",4
+YEM,"Yemen, Rep.",3
+ZMB,Zambia,29
+ZWE,Zimbabwe,5
