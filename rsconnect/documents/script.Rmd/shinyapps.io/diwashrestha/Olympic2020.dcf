@@ -5,9 +5,9 @@ account: diwashrestha
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 4810718
-bundleId: 5110490
+bundleId: 5113411
 url: https://diwashrestha.shinyapps.io/Olympic2020/
-when: 1633529047.44365
-lastSyncTime: 1633529047.44366
+when: 1633593579.1457
+lastSyncTime: 1633593579.1457
 asMultiple: FALSE
 asStatic: FALSE
