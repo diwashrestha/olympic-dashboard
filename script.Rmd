@@ -1,32 +1,36 @@
 ---
-title: "Olympic 2021"
+title: "Olympic 2020"
 runtime: shiny
 output: 
   flexdashboard::flex_dashboard:
-    vertical_layout: scroll
-    theme: 
-      bg: "#101010"
-      fg: "#FDF7F7" 
-      primary: "#ED79F9"
-      base_font: !expr bslib::font_google("Prompt")
-      code_font: !expr bslib::font_google("JetBrains Mono")
     orientation: rows
+    vertical_layout: scroll
+    theme:
+      version: 4
+      bootswatch: lumen
+      base_font: !expr bslib::font_google("Prompt")
+      code_font: !expr bslib::font_google("Poppins")
 ---
 
 
 ```{r, include=FALSE}
-library(pacman)
-p_load(readr,readxl,ggplot2,flexdashboard,tidyr,dplyr,highcharter,plotly,janitor)
-#bslib::bs_themer()
-thematic::thematic_rmd(
-  font = "auto",
-  # To get the dark bg on the geom_raster()
-  sequential = thematic::sequential_gradient(fg_low = FALSE, fg_weight = 0, bg_weight = 1)
-)
+library(readr)
+library(readxl)
+library(ggplot2)
+library(flexdashboard)
+library(tidyr)
+library(dplyr)
+library(highcharter)
+library(plotly)
+library(janitor)
+library(bslib)
+library(thematic)
+library(knitr)
+
 theme_set(theme_bw(base_size = 20))
 ```
 
-```{r load data }
+```{r load data, message=FALSE, warning=FALSE}
 athletes <- read_excel("data/Athletes.xlsx") %>% clean_names()
 entry_gender <- read_excel("data/EntriesGender.xlsx")%>% clean_names
 coaches <- read_excel("data/Coaches.xlsx") %>% clean_names()
@@ -57,25 +61,25 @@ Value Boxes {data-width=200}
 ### Atheletes
 
 ```{r}
-valueBox(total_athletes, caption = "Atheletes", icon = "fa-github")
+valueBox(total_athletes, caption = "Atheletes", icon = "fa-users")
 ```
 
 ### Country 
 
 ```{r}
-valueBox(total_country, caption = "Country", color = "info", icon = "fa-twitter")
+valueBox(total_country, caption = "Country", color = "info", icon = "fa-flag")
 ```
 
 ### Games
 
 ```{r}
-valueBox(total_games, caption = "Games", color = "success", icon = "glyphicon-time")
+valueBox(total_games, caption = "Games", color = "success", icon = "fa-trophy")
 ```
 
 ### Medals
 
 ```{r}
-valueBox(total_medal, caption = "Medals", color = "warning", icon = "fa-facebook")
+valueBox(total_medal, caption = "Medals", color = "warning", icon = "fa-star")
 ```
 
 
@@ -108,12 +112,16 @@ hcmap(
 ```{r}
 athletes_country <- read_csv("data/athletes_country.csv")
 
+coach_country <- coaches %>% group_by(noc) %>%
+  summarise(coach_count = n())
+
+coach_country <- coach_country %>% left_join(athletes_country, by= "noc") %>% select(iso3,noc,coach_count)
 
 hcmap(
   "custom/world-robinson-highres", 
-  data = athletes_country,
-  name = "Total Athletes", 
-  value = "count",
+  data = coach_country,
+  name = "Total Coach", 
+  value = "coach_count",
   borderWidth = 0,
   nullColor = "#d3d3d3",
   joinBy = c("iso-a3", "iso3")
@@ -128,13 +136,14 @@ hcmap(
     
 ```{r}
 athletes_country <- read_csv("data/athletes_country.csv")
-
+medal_country <- medals%>% left_join(athletes_country, by = c("team_noc"= "noc")) %>%
+  select(iso3,team_noc,total)
 
 hcmap(
   "custom/world-robinson-highres", 
-  data = athletes_country,
-  name = "Total Athletes", 
-  value = "count",
+  data = medal_country,
+  name = "Total Medals", 
+  value = "total",
   borderWidth = 0,
   nullColor = "#d3d3d3",
   joinBy = c("iso-a3", "iso3")
@@ -145,13 +154,20 @@ hcmap(
 ```
 
 
-3rd Party Outputs 
+Row 
 -------------------------------------
 
-### Basic Table
+### Country
     
 ```{r}
-knitr::kable(athletes_country)
+table_data <- athletes_country %>%
+  left_join(coach_country,by="iso3")%>%
+  left_join(medal_country,by="iso3")%>%
+  select(`noc.x`,count,coach_count, total) %>%
+  rename('NOC'='noc.x','Players'='count','Coach'='coach_count','Medals' ='total') %>%
+  replace(is.na(.), 0)
+
+knitr::kable(table_data)
 ```
 
 
@@ -194,7 +210,10 @@ output$plotly <- renderPlotly({
 
 ### Learn more
 
-https://rstudio.github.io/thematic/
+
+```{r}
+
+```
 
 Cards
 =====================================     
